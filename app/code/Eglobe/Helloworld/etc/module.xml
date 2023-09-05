@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
+    <module name="Eglobe_Helloworld" setup_version="1.0.0">
+        <sequence>
+            <!-- List any modules that your module depends on -->
+        </sequence>
+        <active>true</active>
+        <codePool>local</codePool>
+    </module>
+</config>
