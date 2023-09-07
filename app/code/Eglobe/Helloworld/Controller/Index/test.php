@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Eglobe\Helloworld\Controller\Index;
 
+
 class Test extends \Magento\Framework\App\Action\Action
 {
 	protected $_pageFactory;
