@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Eglobe\Helloworld\Controller\Index;
 
 
-class Test extends \Magento\Framework\App\Action\Action
+class Test extends \Magento\Framework\App\ActionInterface
 {
 	protected $_pageFactory;
 

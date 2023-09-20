@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Cms\Controller\Page\View">
+        <plugin name="login_customer_restrict_cms_pages" type="Login\Customer\Plugin\RestrictCmsPages" sortOrder="10"/>
+    </type>
+    <type name="Magento\Catalog\Model\Product">
+        <plugin name="login_customer_append_website_name" type="Login\Customer\Plugin\AppendWebsiteName" sortOrder="10"/>
+    </type>
+    <type name="Magento\Customer\Api\AccountManagementInterface">
+        <plugin name="login_customer_log_login_attempts" type="Login\Customer\Plugin\LogLoginAttempts" sortOrder="10"/>
+    </type> 
+   
+</config>
