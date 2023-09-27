@@ -26,7 +26,7 @@ class RestrictCmsPages
             $request
         ) {
             $pageId = $request->getParam('page_id');
-            echo $pageId;
+            //echo $pageId;
             // Define an array of restricted page IDs
             $restrictedPages = [8, 2, 5]; // Add the IDs of restricted pages here
     

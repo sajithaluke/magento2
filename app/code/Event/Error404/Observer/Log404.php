@@ -29,10 +29,16 @@ class Log404 implements ObserverInterface
             // ... (existing code)
 
             $request = $observer->getEvent()->getData('request');
-           $url = $request->getRequestString();
+            $url = $request->getRequestString();
 
             // Update or insert record using the model
-            $this->custom404Log->incrementHitCount($url);
+            $result=$this->custom404Log->incrementHitCount($url);
+            $returnedUrl = $result['url'];
+            $returnedCount = $result['count'];
+            // Log 404 request
+           //$this->logger->info('404 Page Not Found: ' . $url);
+           $this->logger->info('404 Page Not Found: ' . $url . ', Hit Count: ' . $returnedCount);
+
         }
     }
 }

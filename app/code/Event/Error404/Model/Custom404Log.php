@@ -28,9 +28,16 @@ class Custom404Log extends AbstractModel
         if ($existingRecord) {
             // URL already exists, increment hit count
             $connection->query("UPDATE $tableName SET count = count + 1 WHERE url = ?", [$url]);
+            $hitCount = $existingRecord['count'] + 1; // Increment the count
+
         } else {
             // URL doesn't exist, insert a new row
             $connection->query("INSERT INTO $tableName (url, count) VALUES (?, 1)", [$url]);
+            $hitCount = 1; // Set hit count to 1 for new URL
+
         }
+        return ['url' => $url, 'count' => $hitCount];
+
+        
     }
 }
